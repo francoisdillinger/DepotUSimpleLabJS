@@ -38,16 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
     
-    var forList = document.getElementById('forList');
-    var theList = document.getElementById('ul');
     var friends = ['Me','Myself','JR','Betsy','Fluffy','Francis','Francois','Spirit','Cheyenne','Kiante'];
+    var forList = document.getElementById('forList');
     forList.onclick = function() {
-        for(var i = 0; i < friends.list; i++){
-            var name = friends[i];
-        }
-        var listItem = document.createElement('li');
-        listItem.appendChild(name);
-        theList.appendChild(addItem);
+        
+        var theList = document.getElementById('ul');
+        
+        
+         for(var i = 0; i < friends.length; i++){
+            var listItem = document.createElement('li');
+             var newer = friends.shift();
+            //console.log(friends.splice(0,1));
+            listItem.appendChild(document.createTextNode(newer));
+            theList.appendChild(listItem);
+            break;
+         };
+        
+        
         
         
         
